@@ -1,0 +1,17 @@
+<section class="p-5">
+  <div class="my-2">
+    <p class="font-bold">Title</p>
+    <p><%= @todo.title %></p>
+  </div>
+  <div class="my-2">
+    <p class="font-bold">Status</p>
+    <p><%= @todo.status %></p>
+  </div>
+  <div class="my-2">
+    <p class="font-bold">Deadline</p>
+    <p><%= @todo.deadline %></p>
+  </div>
+  <input type="hidden", id="id", value="<%= @todo.id %>" >
+  <button id="delete-btn" class="px-2 py-1 bg-red-500 text-white rounded">Delete this</button>
+  <%= link_to "Show all Todos", root_path %>
+</section>

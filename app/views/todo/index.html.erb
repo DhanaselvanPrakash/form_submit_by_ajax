@@ -1,0 +1,11 @@
+<main class="p-5">
+  <div class="show-todos">
+    <h2 class="text-xl font-semibold">All Todos</h2>
+    <div class="my-4">
+      <%= render "todo/show" %>
+    </div>
+  </div>
+  <div>
+    <%= link_to "Add Todo", create_todo_path, class: "py-1 px-2 bg-emerald-400 rounded" %>
+  </div>
+</main>

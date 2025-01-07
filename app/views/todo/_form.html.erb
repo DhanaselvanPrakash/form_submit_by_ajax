@@ -1,0 +1,23 @@
+<section>
+  <%= form_with(model: @todo, url: create_path, remote: true, id: 'todo-form') do |f| %>
+    <div id="added-msg" class="hidden">
+      <p class="text-emerald-500">Todo Added successfully...!</p>
+    </div>
+    <div>
+      <%= f.label :title, class: "block" %>
+      <%= f.text_field :title, id: "title", class: "border rounded px-2 py-1" %>
+    </div>
+    <div class="my-2">
+      <%= f.label :status, class: "block" %>
+      <%= f.select :status, ["Pending", "Inprogress", "Completed"], {} , id: "status" %>
+    </div>
+    <div>
+      <%= f.label :deadline, class: "block" %>
+      <%= f.text_field :deadline, id: "deadline", class: "border rounded px-2 py-1" %>
+    </div>
+    <div class="my-3">
+      <%= f.submit "Add", id: "add-btn", class: "px-2 py-1 bg-green-500 text-white rounded" %>
+    </div>
+  <% end %>
+  <%= link_to "Show all Todos", root_path %>
+</section>
